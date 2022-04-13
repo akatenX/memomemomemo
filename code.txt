@@ -1,0 +1,12 @@
+lis r12,0x102E
+ori r12,r12,0xFA64
+lwz r12,0x0(r12)
+andi. r12,r12,0x240
+cmpwi r12,0x240
+bne END
+lis r12,0x10A1
+lwz r12,-0x59F0(r12)
+lwz r12,0x104(r12)
+lis r2,0x0100
+stw r2,0xA08(r12)
+END:
