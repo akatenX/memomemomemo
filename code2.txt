@@ -1,0 +1,28 @@
+stwu r1,-0x4(r1)
+mflr r0
+stw r0,0x8(r1)
+
+li r3,0x0
+li r4,0x0
+lis r12,0x028B
+ori r12,r12,0x2B8C
+mtctr r12
+bctrl
+
+lis r12,0x1002
+stw r3,0x4200(r12)
+
+ori r4,r12,0x4200
+
+lis r3,0x109D
+lwz r3,-0x271C(r3)
+lwz r3,0x34(r3)
+lwz r3,0x878(r3)
+lis r12,0x304
+ori r12,r12,0xA5D8
+mtlr r12
+bctrl
+
+lwz r0,0x8(r1)
+mtlr r0
+addi r1,r1,0x4
